@@ -10,9 +10,10 @@ function convertToRoman(num) {
     };
 
   let roman = [];
-  for(let [symbol, value] of obj){
+	const entries = Object.values(obj).reverse();
+  for(let [symbol, value] of entries){
 	  while(num >=  value){
-		  roman += symbol;
+		  roman.push(symbol);
 		  num -= value;
 	  }
   }
