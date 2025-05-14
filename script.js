@@ -10,14 +10,14 @@ function convertToRoman(num) {
     };
 
   let roman = [];
-	const entries = Object.values(obj).reverse();
-  for(let [symbol, value] of entries){
+	
+  for(let [symbol, value] of obj){
 	  while(num >=  value){
 		  roman.push(symbol);
 		  num -= value;
 	  }
   }
- return roman;
+ return roman.join('');
 }
 // You can test your code by running the above function and printing it to console by pressing the run button at the top. To run it with input 36, uncomment the following line
  console.log (convertToRoman(36));
